@@ -2,7 +2,7 @@ package s103n2e2_gestio;
 
 import java.util.Objects;
 
-public class Restaurant implements Comparable {
+public class Restaurant implements Comparable<Restaurant> {
 	
 	private String nom;
 	private int puntuacio;
@@ -39,12 +39,11 @@ public class Restaurant implements Comparable {
 
 	@Override
 	public String toString() {
-		return "Restaurant:" + nom + ", amb puntuació:" + puntuacio + ". \n";
+		return "Restaurant: " + nom + ", amb puntuació: " + puntuacio + ". \n";
 	}
 
 	@Override
-	public int compareTo(Object o) {
-		Restaurant e = (Restaurant) o;
+	public int compareTo(Restaurant e) {
 		return getNom().compareTo(e.getNom());
 	}
 	
