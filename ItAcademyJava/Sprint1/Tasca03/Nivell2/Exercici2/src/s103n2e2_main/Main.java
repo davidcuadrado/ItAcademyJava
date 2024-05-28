@@ -1,10 +1,10 @@
-package s103n2e1_main;
+package s103n2e2_main;
 
 import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import s103n2e1_gestio.Restaurant;
+import s103n2e2_gestio.Restaurant;
 
 public class Main {
 
