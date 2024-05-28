@@ -124,7 +124,7 @@ public class Main {
 		String nom = sc.nextLine();
 		System.out.print("Cognom: ");
 		String cognom = sc.nextLine();
-		System.out.println("DNI: ");
+		System.out.print("DNI: ");
 		String dni = sc.nextLine();
 
 		Persona personaAdd = buscarPersona(personaList, nom, cognom, dni);
