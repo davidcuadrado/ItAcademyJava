@@ -1,4 +1,4 @@
-package s103n2e1_gestio;
+package s103n2e2_gestio;
 
 import java.util.Objects;
 
