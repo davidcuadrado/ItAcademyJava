@@ -1,5 +1,7 @@
 package s103n2e2_main;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -11,9 +13,11 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		HashSet<Restaurant> restaurantSet = new HashSet<Restaurant>();
+		ArrayList<Restaurant> restaurantList = new ArrayList<Restaurant>();
+		char start = ' ';
 		char finish = ' ';
 		
-		/* Set de proves
+		
 		Restaurant restaurant1 = new Restaurant("Bar Na", 8);
 		Restaurant restaurant2 = new Restaurant("Bar Na", 7);
 		Restaurant restaurant3 = new Restaurant("Bar Na", 6);
@@ -21,8 +25,8 @@ public class Main {
 		Restaurant restaurant5 = new Restaurant("Bar Na", 4);
 		Restaurant restaurant6 = new Restaurant("Bar Na", 8);
 		Restaurant restaurant7 = new Restaurant("Bar Na", 6);
-		Restaurant restaurant8 = new Restaurant("Bar Man", 7);
-		Restaurant restaurant9 = new Restaurant("Bar Man", 6);
+		Restaurant restaurant8 = new Restaurant("La Cala", 7);
+		Restaurant restaurant9 = new Restaurant("La Cala", 6);
 		restaurantSet.add(restaurant2);
 		restaurantSet.add(restaurant3);
 		restaurantSet.add(restaurant4);
@@ -34,10 +38,11 @@ public class Main {
 		restaurantSet.add(restaurant1);
 		
 		System.out.println(restaurantSet.toString());
-		*/
-
 		
-		do {
+		System.out.println("Vols introduir un nou restaurant? Introdurïx \'s\' per començar.  ");
+		start = sc.nextLine().charAt(0);
+		
+		while (finish != 'n' && start == 's'){
 			try {
 			System.out.print("Introdueïx el nom: ");
 			String nom = sc.nextLine();
@@ -52,8 +57,16 @@ public class Main {
 				System.out.println("Error en la introducció de dades. ");
 			}
 
-		} while (finish != 'n');
-		System.out.println(restaurantSet.toString());
+		}
+		
+		for (Restaurant restaurantToList : restaurantSet) {
+			restaurantList.add(restaurantToList);
+		}
+		
+		
+		restaurantList.sort(Comparator.comparing(Restaurant::getNom).thenComparing(Restaurant::getPuntuacio));
+		System.out.println(restaurantList.toString());
+		sc.close();
 
 	}
 
