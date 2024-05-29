@@ -13,13 +13,11 @@ class MonthArrayTest {
 	@BeforeEach
 	public void setUp() {
 	gestion1 = new Gestion();
-	gestion1.monthListGen();
 	}
 	
 	
 	@Test
 	public void testPositionsMax() {
-		gestion1 = new Gestion();
 		ArrayList<Month> monthList = gestion1.monthListGen();
 		System.out.println("La llista té 12 posicions: ");
 		Assertions.assertTrue(monthList.size() == 12);
@@ -27,7 +25,6 @@ class MonthArrayTest {
 	
 	@Test
 	public void testNull() {
-		gestion1 = new Gestion();
 		ArrayList<Month> monthList = gestion1.monthListGen();
 		System.out.println("La llista amb els mesos no és nul·la: ");
 		Assertions.assertNotNull(monthList);
@@ -35,7 +32,6 @@ class MonthArrayTest {
 	
 	@Test
 	public void testAgost8() {
-		gestion1 = new Gestion();
 		ArrayList<Month> monthList = gestion1.monthListGen();
 		System.out.println("En la seva posició 8 conté \"agost\": ");
 		//Nos lanza un failure ya que la posición del mes "agost" es 7
