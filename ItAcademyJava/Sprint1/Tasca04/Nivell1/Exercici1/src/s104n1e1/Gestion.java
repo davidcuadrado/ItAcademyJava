@@ -3,12 +3,6 @@ package s104n1e1;
 import java.util.ArrayList;
 
 public class Gestion {
-	
-	/*
-	public static void main(String[] args) {
-		monthListGen();
-	}
-	*/
 
 	public ArrayList<Month> monthListGen() {
 		ArrayList<Month> monthList = new ArrayList<Month>();
@@ -39,9 +33,7 @@ public class Gestion {
 		monthList.add(novembre);
 		monthList.add(desembre);
 		
-		return monthList;
-
+	return monthList;
 	}
 	
-
 }
