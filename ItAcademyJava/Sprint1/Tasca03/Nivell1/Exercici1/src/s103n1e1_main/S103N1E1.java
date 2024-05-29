@@ -16,23 +16,14 @@ public class S103N1E1 {
 		augustAddArrayList(monthList);
 		printMonthArrayList(monthList);
 		
-		
-		
-		
-		
 		HashSet<Month> monthHashSet = new HashSet<Month>();
 		monthHashSet.addAll(monthList);
-		
 		
 		printMonthHashSet(monthHashSet);
 		monthHashSetAddAndRepeat(monthList, monthHashSet);
 		printMonthHashSet(monthHashSet);
 		
-		
-		
-
 	}
-	
 	
 	public static void monthAddArrayList(ArrayList<Month> monthList) {
 		Month month1 = new Month("Gener");
