@@ -7,13 +7,9 @@ public class Month {
 		this.monthName = monthName;
 	}
 	
-	
-
 	public String getMonthName() {
 		return monthName;
 	}
-
-
 
 	@Override
 	public String toString() {
