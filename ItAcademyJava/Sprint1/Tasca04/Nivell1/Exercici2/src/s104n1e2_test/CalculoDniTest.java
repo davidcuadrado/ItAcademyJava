@@ -1,62 +1,91 @@
 package s104n1e2_test;
 
 import s104n1e2.*;
-import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class CalculoDniTest {
-	
+
 	CalculoDni calculoDni1 = new CalculoDni();
 	ArrayList<Integer> dniList = new ArrayList<Integer>();
-	
+	ArrayList<String> dniStringList = new ArrayList<String>();
+
 	@BeforeEach
-	public void setUp(){
+	public void setUp() {
 		dniList = null;
 		calculoDni1 = new CalculoDni();
-		dniListAdd();
-		
-		
-	}
-	
-	@ParameterizedTest
-	public void lengthTest(ArrayList<Integer> dniList) {
-		for (int i = 0; i<dniList.size(); i++) {
-			int dni = dniList.get(i);
-			calculoDni1.calcularLletra(dni);
-		}
-				
-	}
-	
-	public void dniListAdd() {
-		int dni1 = 42867998;
-		int dni2 = 26758945;
-		int dni3 = 35794685;
-		int dni4 = 84259668;
-		int dni5 = 26574816;
-		int dni6 = 94281519;
-		int dni7 = 98782884;
-		int dni8 = 38129874;
-		int dni9 = 15284856;
-		int dni10 = 95515619;
-		
-		dniList.add(dni1);
-		dniList.add(dni2);
-		dniList.add(dni3);
-		dniList.add(dni4);
-		dniList.add(dni5);
-		dniList.add(dni6);
-		dniList.add(dni7);
-		dniList.add(dni8);
-		dniList.add(dni9);
-		dniList.add(dni10);
-		
 	}
 
-	
+	@ParameterizedTest
+	@ValueSource(ints = { 0000, 0000000000, 100000000, 9999, 99999999, 999999999, 65849235, 94586254, 25684975,
+			246589512 })
+	public void typeTest(int dniNum) {
+		char dniChar = calculoDni1.calcularLletra(dniNum);
+		Assertions.assertTrue(Character.class.isInstance(dniChar));
+		Assertions.assertTrue(Integer.class.isInstance(dniNum));
+
+	}
+
+	@ParameterizedTest
+	@ValueSource(ints = { 0000, 0000000000, 100000000, 9999, 99999999, 999999999, 65849235, 9458625, 25684975,
+			246589512 })
+	public void lengthTest(int dniNum) {
+		char dniChar = calculoDni1.calcularLletra(dniNum);
+		String dni = (String.valueOf(dniNum) + dniChar);
+		// Provoca failure en los valores dniNum != 8
+		if ((dniNum / 10000000 >= 1) && (dniNum / 100000000 < 1) && dniNum != 0) {
+		Assertions.assertEquals(dni.length(), 9);
+		} else {
+			Assertions.assertNotEquals(dni.length(), 9);
+		}
+
+	}
+
+	@ParameterizedTest
+	@ValueSource(ints = { 0000, 0000000000, 100000000, 9999, 99999999, 999999999, 65849235, 94586254, 25684975,
+			246589512 })
+	public void dniCorrectTest(int dniNum) {
+		char dniChar = calculoDni1.calcularLletra(dniNum);
+		String dni = (String.valueOf(dniNum) + dniChar);
+		Assertions.assertTrue(String.class.isInstance(dni));
+
+	}
+
+	@ParameterizedTest
+	@ValueSource(ints = { 0000, 0000000000, 100000000, 9999, 99999999, 999999999, 65849235, 94586254, 25684975,
+			246589512 })
+	public void charTest(int dniNum) {
+		char dniChar = calculoDni1.calcularLletra(dniNum);
+
+		char lletraDni = '-';
+		int moduloDni = dniNum % 23;
+		String line = null;
+
+		if ((dniNum / 10000000 >= 1) && (dniNum / 100000000 < 1)) {
+			try {
+				File conversor = new File("src\\s104n1e2_conversor\\conversor.txt");
+
+				BufferedReader reader = new BufferedReader(new FileReader(conversor));
+
+				for (int i = 0; i <= moduloDni; i++) {
+					line = reader.readLine();
+				}
+				reader.close();
+			} catch (IOException e) {
+				System.out.println("Error en la lectura del document. ");
+			}
+			lletraDni = line.charAt(0);
+		}
+		Assertions.assertEquals(dniChar, lletraDni);
+	}
 
 }
