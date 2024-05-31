@@ -73,9 +73,7 @@ class CalculoDniTest {
 		if ((dniNum / 10000000 >= 1) && (dniNum / 100000000 < 1)) {
 			try {
 				File conversor = new File("src\\s104n1e2_conversor\\conversor.txt");
-
 				BufferedReader reader = new BufferedReader(new FileReader(conversor));
-
 				for (int i = 0; i <= moduloDni; i++) {
 					line = reader.readLine();
 				}
