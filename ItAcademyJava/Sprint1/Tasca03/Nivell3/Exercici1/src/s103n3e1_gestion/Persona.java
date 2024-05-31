@@ -13,9 +13,6 @@ public class Persona implements Comparable<Persona>{
 		this.dni = dni;
 	}
 	
-	
-	
-
 	public String getNom() {
 		return nom;
 	}
@@ -44,8 +41,6 @@ public class Persona implements Comparable<Persona>{
 		Persona other = (Persona) obj;
 		return Objects.equals(cognom, other.cognom) && Objects.equals(dni, other.dni) && Objects.equals(nom, other.nom);
 	}
-
-
 
 	@Override
 	public int compareTo(Persona e) {
