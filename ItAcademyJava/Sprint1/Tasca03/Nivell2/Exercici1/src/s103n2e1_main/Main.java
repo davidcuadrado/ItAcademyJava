@@ -13,7 +13,6 @@ public class Main {
 		HashSet<Restaurant> restaurantSet = new HashSet<Restaurant>();
 		char finish = ' ';
 		
-		/* Set de proves
 		Restaurant restaurant1 = new Restaurant("Bar Na", 8);
 		Restaurant restaurant2 = new Restaurant("Bar Na", 7);
 		Restaurant restaurant3 = new Restaurant("Bar Na", 6);
@@ -34,7 +33,6 @@ public class Main {
 		restaurantSet.add(restaurant1);
 		
 		System.out.println(restaurantSet.toString());
-		*/
 
 		
 		do {
