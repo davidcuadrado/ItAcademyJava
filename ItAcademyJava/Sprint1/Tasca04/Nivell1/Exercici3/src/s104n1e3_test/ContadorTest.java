@@ -8,7 +8,7 @@ class ContadorTest {
 
 	
 	@Test
-	void contadorIndexOutOfBoundsTest() {
+	public void contadorIndexOutOfBoundsTest() {
 		Contador contador = new Contador();
 		Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, contador::counterIndexOutOfBounds);
 		
