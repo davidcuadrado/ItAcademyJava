@@ -16,29 +16,9 @@ class PersonalitzatMatcherTest {
     	return personalitzat;
     }
     
-    
     @Test
     public void mordorLengthEightTest() {
        assertThat("Mordor", stringLength(is(8)));
     }
-	
-	
-	
-	
-	
-	
-	/*
-	@Test
-	public void mordorLengthEightTest() {
-		String mordorString = "Mordor";
-		Mordor mordorObj = new Mordor("Mordor");
-		
-		assertThat("Mordor", hasLength(8));
-		assertThat(Mordor::getText, hasLength(8));
-		assertThat(mordorString, hasLength(8));
-		assertThat(mordorObj.getText(), hasLength(8));
-		
-	}
-	*/
 
 }
