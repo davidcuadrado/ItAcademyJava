@@ -18,10 +18,7 @@ public class Main {
 	public static void main(String[] args) {
 		HashSet<Persona> personaList = personaDocReader();
 
-		// System.out.println(personaList.toString());
-
 		menu(personaList);
-
 	}
 
 	public static HashSet<Persona> personaDocReader() {
