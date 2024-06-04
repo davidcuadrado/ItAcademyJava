@@ -11,7 +11,7 @@ class Exercici7Test {
 	@Test
 	void optionalEmptyTest() {
 		
-		Optional<Object> optional1 = Optional.empty();
+		Optional<?> optional1 = Optional.empty();
 		assertThat(optional1).isEmpty();
 	}
 
