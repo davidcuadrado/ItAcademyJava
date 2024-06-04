@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 class Exercici4Test {
 
 	@Test
-	public void exercici4Test() {
+	public void listContainsTest() {
 		ArrayList<Object> llista = new ArrayList<Object>();
 		String str1 = "String for testing";
 		String str2 = "Second string for testing";
