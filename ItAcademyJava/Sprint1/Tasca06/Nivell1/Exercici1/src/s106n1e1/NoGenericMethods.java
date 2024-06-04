@@ -37,7 +37,7 @@ public class NoGenericMethods {
 	
 	@Override
 	public String toString() {
-		return "NoGenericMethods Prints: " + subjecte + ", " + verb + ", " + predicat + ". ";
+		return "NoGenericMethods Prints: " + subjecte + " " + verb + " " + predicat + ". ";
 	}
 	
 	
