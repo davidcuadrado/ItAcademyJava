@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class Exercici3Test {
 
 	@Test
-	public void exercici3Test() {
+	public void arrayEqualTest() {
 		int[] array1 = {1, 2, 3};
 		int[] array2 = {1, 2, 3};
 		assertThat(array1).isEqualTo(array2);
