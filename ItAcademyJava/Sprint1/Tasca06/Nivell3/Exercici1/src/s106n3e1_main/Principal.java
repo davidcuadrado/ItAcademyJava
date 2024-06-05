@@ -6,11 +6,9 @@ public class Principal {
 
 	public static void main(String[] args) {
 		Smartphone galaxy = new Smartphone();
-		Generica generic = new Generica();
 
-		generic.mostrarNom(galaxy);
-		generic.resolucioFoto(galaxy);
+		Generica.mostrarNom(galaxy);
+		Generica.resolucioFoto(galaxy);
 
 	}
-
 }
