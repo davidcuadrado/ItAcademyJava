@@ -2,7 +2,7 @@ package s107n1e1_treballadors;
 
 public class TreballadorOnline extends Treballador{
 	
-	private static int preuTarifaPlana;
+	private final int preuTarifaPlana;
 
 	public TreballadorOnline(String nom, String cognom, int preuPerHora, int preuTarifaPlana) {
 		super(nom, cognom, preuPerHora);
