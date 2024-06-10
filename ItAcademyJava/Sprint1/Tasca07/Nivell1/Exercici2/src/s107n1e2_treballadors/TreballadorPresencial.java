@@ -2,7 +2,7 @@ package s107n1e2_treballadors;
 
 public class TreballadorPresencial extends Treballador {
 
-	private int benzina;
+	private static int benzina;
 
 	public TreballadorPresencial(String nom, String cognom, int preuPerHora, int benzina) {
 		super(nom, cognom, preuPerHora);
