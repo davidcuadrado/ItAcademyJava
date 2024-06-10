@@ -16,8 +16,7 @@ public class SortByLength {
 		
 		stringList.sort(Comparator.comparingInt(String::length));
 		
-		System.out.println(stringList);
-
+		stringList.forEach(System.out::println);
 	}
 
 	public static List<String> convertList(List<Object> list) {
