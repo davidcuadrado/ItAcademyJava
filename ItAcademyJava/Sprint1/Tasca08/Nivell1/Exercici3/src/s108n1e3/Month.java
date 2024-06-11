@@ -16,7 +16,7 @@ public class Month {
 	
 	public static void printMonth(List<String> monthList) {
 		
-		monthList.forEach((s) -> System.out.println(s));
+		monthList.forEach(s -> System.out.println(s));
 	}
 
 }
