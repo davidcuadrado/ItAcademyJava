@@ -19,9 +19,8 @@ public class ListaO {
 
 	public static List<String> screenO(List<String> wordList) {
 
-		List<String> wordListO = wordList.stream().filter(word -> word.contains("o")).collect(Collectors.toList());
+		List<String> wordListO = wordList.stream().filter(word -> word.contains("o")).toList();
 
 		return wordListO;
 	}
-
 }
