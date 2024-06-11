@@ -15,9 +15,6 @@ public class Main {
 		
 		genericCall.genericMethodOneString(persona.toString(), edat, lletra);
 		
-		// A
-		// genericCall.genericMethodOneString(lletra, edat, persona);
-		
 	}
 
 }
