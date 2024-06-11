@@ -18,10 +18,12 @@ public class Principal {
 	
 	public static List<String> screenNames(List<String> nameList){
 		
-		List<String> nameListA = nameList.stream().filter(name -> ( name.charAt(0) == 'A') ).collect(Collectors.toList());
-		List<String> començaATresLletres = nameListA.stream().filter(name -> (name.length() == 3)).collect(Collectors.toList());
+		Predicate<String> empeizaPorA =  name ->  name.charAt(0) == 'A';
+		Predicate<String> tieneLenght3 = name -> name.length() == 3;
 		
-		return començaATresLletres;
+		
+		return nameList.stream().filter(empeizaPorA.and(tieneLenght3)).collect(Collectors.toList());
+		
 	}
 
 }
