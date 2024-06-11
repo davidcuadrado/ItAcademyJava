@@ -19,10 +19,10 @@ public class MoreThan5LetterO {
 
 	public static List<String> screenO(List<String> wordList) {
 
-		List<String> wordListO = wordList.stream().filter(word -> word.contains("o")).collect(Collectors.toList());
-		List<String> wordListOAndMoreThanFiveLetters = wordListO.stream().filter( word -> (word.length() > 5)).collect(Collectors.toList());
+		Predicate<String> containsO = word -> word.contains("o");
+		Predicate<String> lengthOver5 = word -> (word.length() > 5);
 
-		return wordListOAndMoreThanFiveLetters;
+		return wordList.stream().filter(containsO).filter(lengthOver5).toList();
 	}
 
 }
