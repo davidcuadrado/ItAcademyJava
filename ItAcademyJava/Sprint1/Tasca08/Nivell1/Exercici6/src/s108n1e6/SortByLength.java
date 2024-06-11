@@ -22,7 +22,7 @@ public class SortByLength {
 
 		List<String> stringList = new ArrayList<String>();
 
-		list.forEach((s) -> stringList.add(s.toString()));
+		list.forEach(s -> stringList.add(s.toString()));
 
 		return stringList;
 	}
