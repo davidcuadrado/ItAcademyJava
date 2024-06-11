@@ -8,7 +8,6 @@ public class NoGenericMethods {
 	
 	
 	public NoGenericMethods(String subjecte,String verb, String predicat) {
-		super();
 		this.subjecte = subjecte;
 		this.verb = verb;
 		this.predicat = predicat;
