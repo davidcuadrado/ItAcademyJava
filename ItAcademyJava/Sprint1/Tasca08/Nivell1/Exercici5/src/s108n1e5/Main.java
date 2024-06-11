@@ -6,7 +6,7 @@ public class Main {
 
 		Pi pi = () -> 3.1415;
 
-		System.out.println(pi.getPitValue());
+		System.out.println(pi.getPiValue());
 
 	}
 
