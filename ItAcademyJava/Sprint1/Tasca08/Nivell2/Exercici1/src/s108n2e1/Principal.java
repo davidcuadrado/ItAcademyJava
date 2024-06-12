@@ -8,7 +8,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		List<String> nameList = Arrays.asList("Pere", "Joaquim", "Anna", "Arnau", "Amàlia","Francesc", "Ander", "Ana", "Apol·loni");
+		List<String> nameList = List.of("Pere", "Joaquim", "Anna", "Arnau", "Amàlia","Francesc", "Ander", "Ana", "Apol·loni");
 		
 		List<String> començaATresLletres = screenNames(nameList);
 		
