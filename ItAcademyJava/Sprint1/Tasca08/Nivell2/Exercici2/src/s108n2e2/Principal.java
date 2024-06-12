@@ -1,7 +1,6 @@
 package s108n2e2;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 public class Principal {
@@ -18,7 +17,7 @@ public class Principal {
 	
 	public static String numSeparator(List<Integer>numList) {
 		
-		List<String> formatingString = numList.stream().map(num -> (num % 2 == 0 ? "o"+num : "e" +num)).collect(Collectors.toList());
+		List<String> formatingString = numList.stream().map(num -> (num % 2 == 0 ? "o"+num : "e" +num))..toList();
 		String formatedString = String.join(", ", formatingString);
 		
 		return formatedString;
