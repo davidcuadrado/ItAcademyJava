@@ -8,7 +8,7 @@ public class MoreThan5LetterO {
 
 	public static void main(String[] args) {
 
-		List<String> wordList = Arrays.asList("oso", "cabra", "elefante", "lobo", "pelicano", "lobo");
+		List<String> wordList = List.of("oso", "cabra", "elefante", "lobo", "pelicano", "lobo");
 		List<String> wordListOAndMoreThanFiveLetters = screenO(wordList);
 
 		for (String wordOAndMore : wordListOAndMoreThanFiveLetters) {
