@@ -10,23 +10,24 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		Operar operar = (num1, num2, operador) -> switch (operador) {
+		float num1 = 5f;
+		float num2 = 10f;
+		char tipoOper = demanarOperador();
+
+		Operar operar = (float numA, float numB, char operador) -> switch (tipoOper) {
 		case '+' -> num1 + num2;
 		case '-' -> num1 - num2;
 		case '*' -> num1 * num2;
 		case '/' -> num1 / num2;
-		default -> throw new IllegalArgumentException("Unexpected value: " + operador);
-		};
-		
-		System.out.println(operar.operacio(5, 25, '+'));
-		System.out.println(operar.operacio(5, 25, '-'));
-		System.out.println(operar.operacio(5, 25, '*'));
-		System.out.println(operar.operacio(5, 0, '/'));
+		default -> throw new IllegalArgumentException("Unexpected value: " + tipoOper);
 
-		// printOperar(operar);
+		};
+
+		System.out
+				.println("El teu resultat: " + num1 + tipoOper + num2 + " = " + operar.operacio(num1, num2, tipoOper));
 
 	}
-/*
+
 	public static char demanarOperador() {
 		char operador = 'O';
 
@@ -45,27 +46,4 @@ public class Principal {
 		return operador;
 
 	}
-
-	public static void printOperar(Operar operar) {
-
-		float numA = demanarFloat(); //8.36f;
-		float numB = demanarFloat(); //10.54f;
-		char operadorMath = demanarOperador();
-		System.out.println(operar.operacio(numA, numB, operadorMath));
-
-	}
-
-	public static float demanarFloat() {
-
-		try (Scanner sc = new Scanner(System.in)) {
-			System.out.print("Introdueix un float: ");
-			float numFloat =  sc.nextFloat();
-			return  numFloat;
-		} catch (InputMismatchException e) {
-			System.out.println("Error en la introducció de dades. ");
-		}
-
-		return 0f;
-	}
-*/
 }
