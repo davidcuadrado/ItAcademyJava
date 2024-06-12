@@ -17,7 +17,7 @@ public class Principal {
 	
 	public static String numSeparator(List<Integer>numList) {
 		
-		List<String> formatingString = numList.stream().map(num -> (num % 2 == 0 ? "o"+num : "e" +num))..toList();
+		List<String> formatingString = numList.stream().map(num -> (num % 2 == 0 ? "o"+num : "e" +num)).toList();
 		String formatedString = String.join(", ", formatingString);
 		
 		return formatedString;
