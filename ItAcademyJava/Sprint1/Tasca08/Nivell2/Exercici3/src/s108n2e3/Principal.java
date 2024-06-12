@@ -23,8 +23,7 @@ public class Principal {
 
 		};
 
-		System.out
-				.println("El teu resultat: " + num1 + tipoOper + num2 + " = " + operar.operacio(num1, num2, tipoOper));
+		System.out.println("El teu resultat: " + num1 + tipoOper + num2 + " = " + operar.operacio(num1, num2, tipoOper));
 
 	}
 
