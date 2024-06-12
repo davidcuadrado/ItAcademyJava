@@ -9,7 +9,7 @@ public class ReverseLength {
 
 	public static void main(String[] args) {
 
-		List<Object> list = Arrays.asList("oso", 5, "elefante", 24, 567, 0753234, "lobo", "girafa");
+		List<Object> list = List.of("oso", 5, "elefante", 24, 567, 0753234, "lobo", "girafa");
 		
 		
 		List<String> stringList = convertList(list);
