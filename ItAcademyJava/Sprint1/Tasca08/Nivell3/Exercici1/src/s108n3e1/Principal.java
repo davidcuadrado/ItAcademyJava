@@ -34,7 +34,7 @@ public class Principal {
 	public static void mostrarNomEdat(List<Alumne> alumneList) {
 
 		System.out.println("_ _ _ _ _ _\nApartado 1: \n");
-		alumneList.forEach(n -> System.out.println("NOM: " + n.getNom() + ",	 EDAT: " + n.getEdat()));
+		alumneList.forEach(n -> System.out.println("NOM: " + n.getNom() + ",	EDAT: " + n.getEdat()));
 	}
 
 	public static void filtrarLletraA(List<Alumne> alumneList) {
