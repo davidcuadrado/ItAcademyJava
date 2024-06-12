@@ -8,7 +8,7 @@ import java.util.List;
 public class Principal {
 
 	public static void main(String[] args) {
-		List<Object> mixedList = Arrays.asList("fire", "earth", 5, 18, "day", 9, "water", 7, "night", "wind");
+		List<Object> mixedList = List.of("fire", "earth", 5, 18, "day", 9, "water", 7, "night", "wind");
 
 		System.out.println("Apartado 1: \n");
 		mixedList = orderListAlphabetically(mixedList);
