@@ -9,7 +9,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		List<Integer> numList = Arrays.asList(3, 55, 44, 95, 48, 22);
+		List<Integer> numList = List.of(3, 55, 44, 95, 48, 22);
 		
 		String formatedString = numSeparator(numList);
 		
