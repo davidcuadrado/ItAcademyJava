@@ -37,7 +37,7 @@ public class Principal {
 
 	public static void printApartado4(List<Object> mixedList) {
 		System.out.println("_ _ _ _ _ _ _ _ _ _ _ _ _\nApartado 4: \n");
-		List<Object> mixedListNum = mixedListToNum(mixedList);
+		List<Object> mixedListNum = filterToNum(mixedList);
 		mixedListNum.forEach(System.out::println);
 	}
 
@@ -70,7 +70,7 @@ public class Principal {
 		return mixedListATo4;
 	}
 
-	public static List<Object> mixedListToNum(List<Object> mixedList) {
+	public static List<Object> filterToNum(List<Object> mixedList) {
 
 		List<String> mixedListToString = convertListObjToString(mixedList);
 		List<Object> mixedListNum = new ArrayList<Object>();
