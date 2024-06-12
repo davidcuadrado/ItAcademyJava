@@ -8,7 +8,7 @@ public class ListaO {
 
 	public static void main(String[] args) {
 
-		List<String> wordList = Arrays.asList("oso", "cabra", "elefante", "lobo", "pelicano", "lobo");
+		List<String> wordList = List.of("oso", "cabra", "elefante", "lobo", "pelicano", "lobo");
 		List<String> wordListO = screenO(wordList);
 
 		for (String wordO : wordListO) {
