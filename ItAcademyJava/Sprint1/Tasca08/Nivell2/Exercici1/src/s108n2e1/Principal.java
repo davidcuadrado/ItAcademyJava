@@ -1,7 +1,6 @@
 package s108n2e1;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Principal {
 
@@ -21,7 +20,7 @@ public class Principal {
 		Predicate<String> tieneLenght3 = name -> name.length() == 3;
 		
 		
-		return nameList.stream().filter(empeizaPorA.and(tieneLenght3)).collect(Collectors.toList());
+		return nameList.stream().filter(empeizaPorA.and(tieneLenght3)).toList();
 		
 	}
 
