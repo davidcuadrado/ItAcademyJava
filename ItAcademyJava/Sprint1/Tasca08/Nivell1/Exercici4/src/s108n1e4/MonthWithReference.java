@@ -1,6 +1,5 @@
 package s108n1e4;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class MonthWithReference {
