@@ -15,7 +15,7 @@ public class Serializador {
 		if (personaAdd.getClass().isAnnotationPresent(Serializar.class)) {
 			Serializar persona = personaAdd.getClass().getAnnotation(Serializar.class);
 			String rutaArchivo = persona.rutaArchivo();
-			File personaSerializada = new File(rutaArchivo, personaAdd.getClass()+ ".txt");
+			File personaSerializada = new File(rutaArchivo, personaAdd.getClass()+ ".json");
 
 			try (FileOutputStream serializandoPersona = new FileOutputStream(personaSerializada, true);
 					ObjectOutputStream finSerializacion = new ObjectOutputStream(serializandoPersona)){
