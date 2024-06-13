@@ -2,8 +2,7 @@ package s107n2e1;
 
 import java.io.Serializable;
 
-@Serializar
-
+@SerializarJSON
 public class Persona implements Serializable {
 	private String nom;
 	private String cognom;
@@ -32,13 +31,6 @@ public class Persona implements Serializable {
 		return edat;
 	}
 
-
-	@Override
-	public String toString() {
-		return "{\"nom\":"+nom+",\"cognom\":"+cognom+",\"edat\":"+edat+"}";
-	
-	}
-	
 	
 	
 
