@@ -11,7 +11,11 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Alfabetico {
 
-	final static String directory = "D:\\00proyectos\\S105N1E1\\src\\s105n1e1_import\\toOrder.txt";
+	static String directory = "D:\\00proyectos\\S105N1E1\\src\\s105n1e1_import\\toOrder.txt";
+
+	public static void iniciar() {
+		// añadir introducción de datos directorio mediante teclado.
+	}
 
 	public static void ordenarDirectorio(String directory) {
 
