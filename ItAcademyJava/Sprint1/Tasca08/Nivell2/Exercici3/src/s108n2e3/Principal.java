@@ -4,18 +4,15 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		float num1 = 5f;
-		float num2 = 10f;
-		char tipoOper = '*';
+		float num1 = 3.33f;
+		float num2 = 6.66f;
 
-		Operar operar = () -> switch (tipoOper) {
-		case '+' -> num1 + num2;
-		case '-' -> num1 - num2;
-		case '*' -> num1 * num2;
-		case '/' -> num1 / num2;
-		default -> throw new IllegalArgumentException("Unexpected value: " + tipoOper);
-		};
-
-		System.out.println("El teu resultat: " + num1 + tipoOper + num2 + " = " + operar.operacio());
+		Operar sumar = () ->  num1 + num2;
+		Operar restar = () -> num1 - num2;
+		Operar multiplicar = () -> num1 * num2;
+		Operar dividir = () -> num1 / num2;
+		List<Operar> operacionsPosibles = List.of(sumar, restar, multiplicar, dividir);
+		
+		operacionsPosibles.forEach(n -> System.out.println("Resultat: " + n.operacio()));		
 	}
 }
