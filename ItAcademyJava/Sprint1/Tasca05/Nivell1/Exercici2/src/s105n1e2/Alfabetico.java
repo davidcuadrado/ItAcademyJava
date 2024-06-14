@@ -13,11 +13,28 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Alfabetico {
 
-	static String directory = "D:\\00proyectos\\S105N1E2";
+	static String directory = "";
 	static File directoryFile = new File(Alfabetico.directory);
-	
+
 	public static void iniciar() {
-		// añadir introducción de datos directorio mediante teclado.
+
+		do {
+			directory = directoryInput();
+			directoryFile = new File(Alfabetico.directory);
+
+			if (!directoryFile.exists() || !directoryFile.canRead()) {
+				System.out.println("Error en la ruta del directorio.");
+
+			}
+
+		} while ((!directoryFile.exists() || !directoryFile.canRead()));
+
+	}
+
+	public static String directoryInput() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduzca el directorio: ");
+		return sc.nextLine();
 	}
 
 	public static void ordenarDirectorio(String directory) {
