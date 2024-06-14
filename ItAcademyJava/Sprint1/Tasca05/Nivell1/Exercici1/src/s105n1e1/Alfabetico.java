@@ -9,8 +9,9 @@ import java.util.stream.Collectors;
 
 public class Alfabetico {
 
-	public static void leerDirectorio() {
-		final String directory = "D:\\00proyectos\\S105N1E1\\src\\s105n1e1_import\\toOrder.txt"; 
+	final static String directory = "D:\\00proyectos\\S105N1E1\\src\\s105n1e1_import\\toOrder.txt";
+
+	public static void ordenarDirectorio(String directory) {
 
 		try (BufferedReader bf = new BufferedReader(new FileReader(directory))) {
 
@@ -18,7 +19,7 @@ public class Alfabetico {
 			String wordString = wordStringBuilder.toString().trim();
 			String[] wordArray = wordString.split("[\\s+ , ; . : _ \\- / ( )]");
 			List<String> wordList = Arrays.asList(wordArray);
-			
+
 			wordList = wordList.stream().sorted(String.CASE_INSENSITIVE_ORDER).toList();
 
 			wordList.forEach(System.out::println);
@@ -26,7 +27,5 @@ public class Alfabetico {
 		} catch (IOException e) {
 			System.out.println("No s'ha trobat l'arxiu especificat. ");
 		}
-
 	}
-
 }
