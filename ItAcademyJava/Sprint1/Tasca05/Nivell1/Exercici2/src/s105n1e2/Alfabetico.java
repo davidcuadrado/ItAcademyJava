@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.text.SimpleDateFormat;
 
@@ -73,7 +74,7 @@ public class Alfabetico {
 					System.out.println("(D) " + file.getName() + " - Last Modification: "
 							+ lastModDate.format(file.lastModified()));
 					listarArbolDirectorio(file);
-					
+
 				}
 			}
 		} catch (NullPointerException e) {
