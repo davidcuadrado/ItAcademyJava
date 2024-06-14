@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class Alfabetico {
 
 	final static String directory = "D:\\00proyectos\\S105N1E1\\src\\s105n1e1_import\\toOrder.txt";
@@ -17,6 +19,7 @@ public class Alfabetico {
 
 			StringBuilder wordStringBuilder = new StringBuilder(bf.lines().collect(Collectors.joining()));
 			String wordString = wordStringBuilder.toString().trim();
+			wordString = StringUtils.stripAccents(wordString);
 			String[] wordArray = wordString.split("[\\s+ , ; . : _ \\- / ( )]");
 			List<String> wordList = Arrays.asList(wordArray);
 
