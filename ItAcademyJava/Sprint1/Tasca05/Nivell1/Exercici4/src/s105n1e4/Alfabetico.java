@@ -40,7 +40,7 @@ public class Alfabetico {
 			System.out.println("Introduzca el directorio: ");
 			directory = sc.nextLine();
 		} catch (NoSuchElementException e) {
-			e.printStackTrace();
+			System.out.println("Error en la introducció de dades per teclat. ");
 		}
 	}
 
@@ -66,30 +66,22 @@ public class Alfabetico {
 
 	public static void listarArbolDirectorio(File directoryFile) {
 
-		try {
+		List<File> directoryList = List.of(directoryFile.listFiles());
+		directoryList = directoryList.stream().sorted().toList();
+		SimpleDateFormat lastModDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-			List<File> directoryList = List.of(directoryFile.listFiles());
-			directoryList = directoryList.stream().sorted().toList();
-			SimpleDateFormat lastModDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
-			for (File file : directoryList) {
-				if (file.isFile()) {
-					System.out.println("(F) " + file.getName() + " - Last Modification:"
-							+ lastModDate.format(file.lastModified()));
-				} else {
-					System.out.println("(D) " + file.getName() + " - Last Modification: "
-							+ lastModDate.format(file.lastModified()));
-					listarArbolDirectorio(file);
-
-				}
+		for (File file : directoryList) {
+			if (file.isFile()) {
+				System.out.println("(F) " + file.getName() + " - Last Modification:"
+						+ lastModDate.format(file.lastModified()));
+			} else {
+				System.out.println("(D) " + file.getName() + " - Last Modification: "
+						+ lastModDate.format(file.lastModified()));
+				listarArbolDirectorio(file);
 			}
-		} catch (NullPointerException e) {
-			System.out.println("Error en la ruta del directori. ");
-			e.printStackTrace();
 		}
-
 	}
-
+	
 	public static void txtArbolDirectorio(File directoryFile) {
 
 		File nuevotxt = new File(directory + "\\directory_tree_file.txt");
@@ -114,9 +106,6 @@ public class Alfabetico {
 
 		} catch (IOException e) {
 			System.out.println("Error en la ruta del directori. ");
-			e.printStackTrace();
-		} catch (NullPointerException e) {
-			System.out.println("El volumen de directorios es demasiado grande. ");
 		}
 	}
 
