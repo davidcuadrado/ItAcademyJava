@@ -34,12 +34,11 @@ public class Alfabetico {
 	}
 
 	public static void directoryInput() {
-		
 		try (Scanner sc = new Scanner(System.in);){
 			System.out.println("Introduzca el directorio: ");
 			directory = sc.nextLine();
 		} catch (NoSuchElementException e) {
-			e.printStackTrace();
+			System.out.println("Error en la introducció de dades per teclat. ");
 		}
 	}
 	
