@@ -20,9 +20,8 @@ public class Alfabetico {
 	static File directoryFile = new File(Alfabetico.directory);
 
 	public static void iniciar() {
-
 		do {
-			directory = directoryInput();
+			directoryInput();
 			directoryFile = new File(Alfabetico.directory);
 
 			if (!directoryFile.exists() || !directoryFile.canRead()) {
@@ -34,10 +33,14 @@ public class Alfabetico {
 
 	}
 
-	public static String directoryInput() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Introduzca el directorio: ");
-		return sc.nextLine();
+	public static void directoryInput() {
+
+		try (Scanner sc = new Scanner(System.in);) {
+			System.out.println("Introduzca el directorio: ");
+			directory = sc.nextLine();
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void ordenarDirectorio(String directory) {
