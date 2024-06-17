@@ -38,34 +38,3 @@ public class Main {
 	}
 
 }
-
-/*public static void main(String[] args) {
-try {
-    // Obtener la clase
-    Class<?> clazz = MiClase.class;
-    
-    // Crear una instancia de la clase
-    Object obj = clazz.getDeclaredConstructor().newInstance();
-    
-    // Obtener todos los métodos de la clase
-    Method[] methods = clazz.getDeclaredMethods();
-    
-    // Iterar sobre los métodos y verificar si están anotados con MiAnotacion
-    for (Method method : methods) {
-        if (method.isAnnotationPresent(MiAnotacion.class)) {
-            // Obtener la anotación
-            MiAnotacion anotacion = method.getAnnotation(MiAnotacion.class);
-            
-            // Imprimir el valor de la anotación
-            System.out.println("Método: " + method.getName() + ", Valor de la anotación: " + anotacion.valor());
-            
-            // Invocar el método anotado
-            method.invoke(obj);
-        }
-    }
-} catch (Exception e) {
-    e.printStackTrace();
-}
-}
-
-*/
