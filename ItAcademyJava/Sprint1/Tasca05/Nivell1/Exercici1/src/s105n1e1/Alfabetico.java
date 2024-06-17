@@ -36,7 +36,7 @@ public class Alfabetico {
 			System.out.println("Introduzca el directorio: ");
 			directory = sc.nextLine();
 		} catch (NoSuchElementException e) {
-			e.printStackTrace();
+			System.out.println("Error en la introducció de dades per teclat. ");
 		}
 	}
 
