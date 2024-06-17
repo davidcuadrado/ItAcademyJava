@@ -81,9 +81,8 @@ public class Alfabetico {
 
 				}
 			}
-		} catch (NullPointerException e) {
+		} catch (IOException e) {
 			System.out.println("Error en la ruta del directori. ");
-			e.printStackTrace();
 		}
 
 	}
