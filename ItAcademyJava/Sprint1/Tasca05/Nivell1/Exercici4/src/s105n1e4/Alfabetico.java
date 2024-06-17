@@ -129,6 +129,8 @@ public class Alfabetico {
 			} catch (IOException e) {
 				System.out.println("Error en la ruta del directorio introducida");
 			}
+		} else {
+			System.out.println("El directori no té format .txt");
 		}
 	}
 
