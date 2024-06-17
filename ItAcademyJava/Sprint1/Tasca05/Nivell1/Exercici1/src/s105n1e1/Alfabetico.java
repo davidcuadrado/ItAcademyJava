@@ -11,10 +11,30 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Alfabetico {
 
-	static String directory = "D:\\00proyectos\\S105N1E1\\src\\s105n1e1_import\\toOrder.txt";
+	static String directory = "";
+	static File directoryFile = new File(Alfabetico.directory);
 
 	public static void iniciar() {
-		// añadir introducción de datos directorio mediante teclado.
+
+		do {
+			directoryInput();
+			directoryFile = new File(Alfabetico.directory);
+
+			if (!directoryFile.exists() || !directoryFile.canRead()) {
+				System.out.println("Error en la ruta del directorio.");
+			}
+
+		} while ((!directoryFile.exists() || !directoryFile.canRead()));
+
+	}
+
+	public static void directoryInput() {
+		try (Scanner sc = new Scanner(System.in);){
+			System.out.println("Introduzca el directorio: ");
+			directory = sc.nextLine();
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void ordenarDirectorio(String directory) {
