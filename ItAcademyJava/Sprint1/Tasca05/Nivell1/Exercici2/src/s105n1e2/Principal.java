@@ -6,7 +6,6 @@ public class Principal {
 		
 		Alfabetico.iniciar();
 
-		// Exercici1: Alfabetico.ordenarDirectorio(Alfabetico.directory);
 		Alfabetico.listarArbolDirectorio(Alfabetico.directoryFile);
 	}
 }
