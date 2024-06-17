@@ -84,9 +84,8 @@ public class Alfabetico {
 
 				}
 			}
-		} catch (NullPointerException e) {
+		} catch (IOException e) {
 			System.out.println("Error en la ruta del directori. ");
-			e.printStackTrace();
 		}
 
 	}
@@ -117,8 +116,6 @@ public class Alfabetico {
 		} catch (IOException e) {
 			System.out.println("Error en la ruta del directori. ");
 			e.printStackTrace();
-		} catch (NullPointerException e) {
-			System.out.println("El volumen de directorios es demasiado grande. ");
 		}
 		}
 
