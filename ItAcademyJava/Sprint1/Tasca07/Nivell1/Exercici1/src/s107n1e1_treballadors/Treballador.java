@@ -7,7 +7,6 @@ public class Treballador {
 	
 	
 	public Treballador(String nom, String cognom, int preuPerHora) {
-		super();
 		this.nom = nom;
 		this.cognom = cognom;
 		this.preuPerHora = preuPerHora;
