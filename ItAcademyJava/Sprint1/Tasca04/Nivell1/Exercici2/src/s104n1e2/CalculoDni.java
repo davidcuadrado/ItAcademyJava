@@ -7,7 +7,6 @@ public class CalculoDni {
 	public char calcularLletra(int dniNum) {
 		char lletraDni = '-';
 		int moduloDni = dniNum % 23;
-		// final String charList = "TRWAGMYFPDXBNJZSQVHLCKE";
 		final char[] letras = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B',
 	        	'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
 
