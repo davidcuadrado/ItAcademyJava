@@ -121,8 +121,6 @@ public class Alfabetico {
 				}
 			}
 
-			System.out.println("S'ha creat l'arxiu correctament. ");
-
 		} catch (IOException e) {
 			System.out.println("Error en la ruta del directori. ");
 			e.printStackTrace();
