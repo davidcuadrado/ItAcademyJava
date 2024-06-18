@@ -1,0 +1,3 @@
+Érase una vez un documento que tenía que ser ordenado alfabéticamente.
+
+Una vez se listó alfabéticamente, se comprobó que leía correctamente una segunda línea.
