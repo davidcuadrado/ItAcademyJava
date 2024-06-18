@@ -6,7 +6,6 @@ public abstract class Instrument {
 	private int preu;
 	
 	public Instrument(String nom, int preu) {
-		super();
 		this.nom = nom;
 		this.preu = preu;
 	}
