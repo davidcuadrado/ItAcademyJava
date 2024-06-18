@@ -12,14 +12,12 @@ class Exercici1Test {
 		int num1 = (int) 8;
 		int num2 = (int) 8;
 		assertThat(num1).isEqualTo(num2);
-	//	assertThat(num1).isNotEqualTo(num2);
 	}
 	
 	@Test
 	public void notEqualTest() {
 		int num1 = (int) 5;
 		int num2 = (int) 8;
-	//	assertThat(num1).isEqualTo(num2);
 		assertThat(num1).isNotEqualTo(num2);
 	}
 
