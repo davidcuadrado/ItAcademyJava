@@ -8,7 +8,6 @@ public class Butaca {
 	private String nomPersona;
 	
 	public Butaca(int numFila, int numSeient, String nomPersona) {
-		super();
 		this.numFila = numFila;
 		this.numSeient = numSeient;
 		this.nomPersona = nomPersona;
