@@ -13,27 +13,23 @@ class MonthArrayTest {
 	@BeforeEach
 	public void setUp() {
 	gestion1 = new Gestion();
-	gestion1.monthListGen();
 	}
 	
 	
 	@Test
 	public void testPositionsMax() {
-		gestion1 = new Gestion();
 		List<String> monthList = gestion1.monthListGen();
 		Assertions.assertTrue(monthList.size() == 12);
 	}
 	
 	@Test
 	public void testNull() {
-		gestion1 = new Gestion();
 		List<String> monthList = gestion1.monthListGen();
 		Assertions.assertNotNull(monthList);
 	}
 	
 	@Test
 	public void testAgost8() {
-		gestion1 = new Gestion();
 		List<String> monthList = gestion1.monthListGen();
 		//Nos lanza un failure ya que la posición del mes "agost" es 7
 		Assertions.assertEquals(monthList.get(8), "agost");
