@@ -6,7 +6,6 @@ public class Telefon {
 	protected String model;
 	
 	public Telefon(String marca, String model) {
-		super();
 		this.marca = marca;
 		this.model = model;
 	}
