@@ -10,7 +10,7 @@ public class Venda {
 
 	public Venda(ArrayList<Producte> llistaVenda) {
 		this.llistaVenda = llistaVenda;
-		this.preuTotal = 0;
+		this.preuTotal;
 	}
 
 	public ArrayList<Producte> getLlistaVenda() {
