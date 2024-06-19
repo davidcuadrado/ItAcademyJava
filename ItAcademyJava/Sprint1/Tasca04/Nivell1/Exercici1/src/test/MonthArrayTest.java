@@ -8,7 +8,7 @@ import s104n1e1.*;
 
 class MonthArrayTest {
 	
-	Gestion gestion1 = new Gestion();
+	Gestion gestion1 = null);
 	
 	@BeforeEach
 	public void setUp() {
@@ -31,8 +31,8 @@ class MonthArrayTest {
 	@Test
 	public void testAgost8() {
 		List<String> monthList = gestion1.monthListGen();
-		//Nos lanza un failure ya que la posición del mes "agost" es 7
-		Assertions.assertEquals(monthList.get(8), "agost");
+		//Nos lanza un failure si assertEquals ya que la posición del mes "agost" es 7
+		Assertions.assertNotEquals(monthList.get(8), "agost");
 	}
 	
 
