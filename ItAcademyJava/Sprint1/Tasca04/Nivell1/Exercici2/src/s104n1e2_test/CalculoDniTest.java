@@ -45,7 +45,7 @@ class CalculoDniTest {
 		if ((dniNum / 10000000 >= 1) && (dniNum / 100000000 < 1) && dniNum != 0) {
 			Assertions.assertEquals(dni.length(), 9);
 		} else {
-			Assertions.assertNotEquals(dni.length(), 9);
+			Assertions.assertEquals(dni.length(), 9);
 		}
 
 	}
