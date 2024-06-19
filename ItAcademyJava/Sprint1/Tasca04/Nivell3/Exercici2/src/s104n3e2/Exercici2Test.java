@@ -10,9 +10,7 @@ class Exercici2Test {
 	public void objectEqualsTest() {
 		Valor obj1 = new Valor(5);
 		Valor obj2 = new Valor(5);
-		assertThat(obj1).isSameAs(obj2);
 		assertThat(obj1).isNotSameAs(obj2);
-	
 	}
 
 }
