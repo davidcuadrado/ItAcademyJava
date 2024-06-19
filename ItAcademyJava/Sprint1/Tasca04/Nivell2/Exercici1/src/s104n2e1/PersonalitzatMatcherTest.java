@@ -17,8 +17,8 @@ class PersonalitzatMatcherTest {
     }
     
     @Test
-    public void mordorLengthEightTest() {
-       assertThat("Mordor", stringLength(is(8)));
+    public void mordorLengthTest() {
+       assertThat("Mordor", stringLength(is(6)));
     }
 
 }
