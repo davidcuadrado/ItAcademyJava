@@ -15,10 +15,10 @@ class CalculoDniTest {
 	CalculoDni calculoDni1 = new CalculoDni();
 
 	private static Stream<Arguments> dniPredefinits() {
-		return Stream.of(Arguments.of(34586498, 'P'), Arguments.of(45926775, 'J'), Arguments.of(34865971, 'L'),
-				Arguments.of(61248537, 'R'), Arguments.of(35694528, 'T'), Arguments.of(84532699, 'N'),
-				Arguments.of(75426485, 'K'), Arguments.of(26458521, 'V'), Arguments.of(32654851, 'S'),
-				Arguments.of(75426589, 'G'));
+		return Stream.of(Arguments.of(34586498, 'H'), Arguments.of(45926775, 'F'), Arguments.of(34865971, 'H'),
+				Arguments.of(61248537, 'C'), Arguments.of(35694528, 'T'), Arguments.of(84532699, 'V'),
+				Arguments.of(75426485, 'D'), Arguments.of(26458521, 'B'), Arguments.of(32654851, 'A'),
+				Arguments.of(75426589, 'K'));
 	}
 
 	@BeforeEach
