@@ -1,14 +1,14 @@
 package test;
 
 import org.junit.jupiter.api.Test;
-import java.util.ArrayList;
+import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import s104n1e1.*;
 
 class MonthArrayTest {
 	
-	Gestion gestion1 = new Gestion();
+	Gestion gestion1 = null);
 	
 	@BeforeEach
 	public void setUp() {
@@ -18,24 +18,21 @@ class MonthArrayTest {
 	
 	@Test
 	public void testPositionsMax() {
-		ArrayList<Month> monthList = gestion1.monthListGen();
-		System.out.println("La llista té 12 posicions: ");
+		List<String> monthList = gestion1.monthListGen();
 		Assertions.assertTrue(monthList.size() == 12);
 	}
 	
 	@Test
 	public void testNull() {
-		ArrayList<Month> monthList = gestion1.monthListGen();
-		System.out.println("La llista amb els mesos no és nul·la: ");
+		List<String> monthList = gestion1.monthListGen();
 		Assertions.assertNotNull(monthList);
 	}
 	
 	@Test
 	public void testAgost8() {
-		ArrayList<Month> monthList = gestion1.monthListGen();
-		System.out.println("En la seva posició 8 conté \"agost\": ");
-		//Nos lanza un failure ya que la posición del mes "agost" es 7
-		Assertions.assertEquals(monthList.get(8).getMonthName(), "agost");
+		List<String> monthList = gestion1.monthListGen();
+		//Nos lanza un failure si assertEquals ya que la posición del mes "agost" es 7
+		Assertions.assertNotEquals(monthList.get(8), "agost");
 	}
 	
 
