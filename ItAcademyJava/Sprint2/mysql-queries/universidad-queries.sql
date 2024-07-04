@@ -2,7 +2,7 @@ USE universidad;
 SELECT p.apellido1, p.apellido2, nombre FROM persona p WHERE tipo = 'alumno' ORDER BY p.apellido1 ASC, p.apellido2 ASC, p.nombre ASC;
 SELECT p.apellido1, p.apellido2, nombre, telefono FROM persona p WHERE tipo = 'alumno' HAVING telefono IS NULL;
 SELECT p.apellido1, p.apellido2, nombre FROM persona p WHERE tipo = 'alumno' AND fecha_nacimiento BETWEEN '1999-01-01' AND '1999-12-31';
-SELECT p.apellido1, p.apellido2, nombre, telefono FROM persona p WHERE tipo = 'alumno' AND p.nif LIKE '%K' HAVING telefono IS NULL ;
+SELECT p.apellido1, p.apellido2, nombre, telefono FROM persona p WHERE tipo = 'profesor' AND p.nif LIKE '%K' HAVING telefono IS NULL ;
 SELECT a.* FROM asignatura a LEFT JOIN grado g ON a.id_grado = g.id WHERE a.cuatrimestre = 3 AND a.curso = 3 AND g.id = 7;
 SELECT p.apellido1, p.apellido2, p.nombre, d.nombre FROM persona p LEFT JOIN profesor ON p.id = profesor.id_profesor LEFT JOIN departamento d ON profesor.id_departamento = d.id ORDER BY p.apellido1 ASC, p.apellido2 ASC, p.nombre ASC;
 SELECT p.nif, asignatura.nombre, curso_escolar.anyo_inicio, curso_escolar.anyo_fin FROM persona p LEFT JOIN alumno_se_matricula_asignatura ON p.id = alumno_se_matricula_asignatura.id_alumno LEFT JOIN asignatura ON alumno_se_matricula_asignatura.id_asignatura = asignatura.id LEFT JOIN curso_escolar ON asignatura.id = curso_escolar.id WHERE nif = '26902806M';
