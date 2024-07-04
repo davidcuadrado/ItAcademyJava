@@ -18,8 +18,8 @@ SELECT a.id AS asignatura_no_prof, prof.id_profesor FROM asignatura a LEFT JOIN 
 SELECT DISTINCT d.nombre AS nunca_impartieron, a.curso AS asignatura_curso FROM departamento d LEFT JOIN profesor prof ON d.id = prof.id_departamento LEFT JOIN asignatura a ON a.id_profesor = prof.id_profesor HAVING asignatura_curso IS NULL;
 
 
-SELECT COUNT(DISTINCT asma.id_alumno) AS cantidad_alumnos FROM alumno_se_matricula_asignatura asma;
-SELECT COUNT(DISTINCT asma.id_alumno) AS alumnes_1999 FROM alumno_se_matricula_asignatura asma LEFT JOIN persona p ON asma.id_alumno = p.id WHERE p.fecha_nacimiento BETWEEN '1999-01-01' AND '1999-12-31';
+SELECT COUNT(DISTINCT p.id) AS cantidad_alumnos FROM persona p WHERE tipo = 'alumno';
+SELECT COUNT(DISTINCT p.id) AS alumnes_1999 FROM persona p WHERE tipo = 'alumno' AND p.fecha_nacimiento BETWEEN '1999-01-01' AND '1999-12-31';
 SELECT DISTINCT d.nombre, COUNT(p.id_profesor) AS numero_profesores FROM departamento d LEFT JOIN profesor p ON d.id = p.id_departamento GROUP BY d.nombre HAVING numero_profesores > 0 ORDER BY numero_profesores DESC;
 SELECT DISTINCT d.nombre, COUNT(p.id_profesor) AS numero_profesores FROM departamento d LEFT JOIN profesor p ON d.id = p.id_departamento GROUP BY d.nombre; 
 SELECT DISTINCT g.nombre, COUNT(a.id) AS numero_asignaturas FROM grado g LEFT JOIN asignatura a ON g.id = a.id_grado GROUP BY g.nombre ORDER BY `numero_asignaturas` DESC;
