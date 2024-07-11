@@ -8,7 +8,6 @@ public class Undo {
 	
 	private static Undo instance;
 	private static ArrayList<String> commandList;
-	private static ArrayList<String> pastSessionsCommandList;
 	
 	private Undo() {
 		commandList = new ArrayList<String>();
