@@ -1,11 +1,16 @@
 package s301n1;
 
+import java.util.Scanner;
+
 public class Principal {
 
 	public static void main(String[] args) {
-		
-		//Menu.start();
+		try (Scanner sc = new Scanner(System.in)) {
+			Menu.start(sc);
+
+		}catch (Exception e) {
+			System.out.println("Data entry error. ");
+		}
 
 	}
-
 }
