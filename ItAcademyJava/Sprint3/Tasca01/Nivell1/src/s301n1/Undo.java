@@ -118,7 +118,8 @@ public class Undo {
 
 	public static void undoShowExpansion() {
 		System.out.println("Expanded command list: ");
-		// Print commandList elements + file elements
+		undoRead();
+		System.out.println();
 
 	}
 
