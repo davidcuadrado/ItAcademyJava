@@ -213,22 +213,6 @@
 			"estimatedSize": "",
 			"cols": [
 				{
-					"id": "820483a2-7c64-4540-9386-e11fadda683e",
-					"name": "_id",
-					"datatype": "int",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"list": false,
-					"comment": "",
-					"data": "",
-					"enum": "",
-					"validation": "",
-					"pattern": false,
-					"estimatedSize": "",
-					"any": ""
-				},
-				{
 					"id": "1b02b1ce-a218-4ccb-87f4-0815e9f4b76f",
 					"name": "street",
 					"datatype": "string",
@@ -1094,23 +1078,6 @@
 			"estimatedSize": "",
 			"cols": [
 				{
-					"id": "14247d90-1e7f-4d5d-b63f-6a11bcee1d27",
-					"name": "id",
-					"datatype": "int",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"list": false,
-					"comment": "",
-					"data": "",
-					"enum": "",
-					"validation": "",
-					"pattern": false,
-					"estimatedSize": "",
-					"any": "",
-					"fk": false
-				},
-				{
 					"id": "0eb13376-35d5-44f2-b731-c00f0603bcd7",
 					"name": "street",
 					"datatype": "string",
@@ -1311,7 +1278,7 @@
 		"def_collation": "",
 		"def_others": "",
 		"connectionVersion": "",
-		"lastSaved": 1720979523191
+		"lastSaved": 1720979638000
 	},
 	"otherObjects": {},
 	"diagrams": {
