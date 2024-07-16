@@ -66,7 +66,7 @@ public class Menu {
 			break;
 		case 'a':	Undo.undoAppend();
 			break;
-		case 'w':	Undo.undoWrite();
+		case 'w':	Undo.undoWrite(sc);
 			break;
 		case 'c':	Undo.undoClear();
 			break;
@@ -83,7 +83,7 @@ public class Menu {
 				"You are about to exit the program, all unsaved entries will be lost. Press \'0\' again to confirm. ");
 
 		char exit = sc.nextLine().charAt(0);
-		if (exit != 0) {
+		if (exit != '0') {
 			System.out.println("Termination aborted. Returning to the menu. \n");
 		}
 

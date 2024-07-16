@@ -1,7 +1,9 @@
 package s301n1;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -99,7 +101,19 @@ public class Undo {
 	}
 
 	public static void undoRead() {
-		// buffered reader for reading the file
+		if (undoFile.isFile() && undoFile.getName().endsWith(".txt")) {
+		try (BufferedReader br = new BufferedReader(new FileReader(directory))) {
+			String lineaPrint = br.readLine();
+			do {
+				System.out.println(lineaPrint);
+			} while ((lineaPrint = br.readLine()) != null);
+			
+		} catch (IOException e) {
+			System.out.println("File not found. Check file directory. ");
+		}
+		} else {
+			System.out.println("Unexpected format directory. ");
+		}
 	}
 
 	public static void undoShowExpansion() {
@@ -109,9 +123,9 @@ public class Undo {
 	}
 
 	public static void undoAppend() {
-		try (BufferedWriter bf = new BufferedWriter(new FileWriter(directory, true))) {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(directory, true))) {
 			for (String commandAdd : commandList) {
-				bf.write(commandAdd + "\n");
+				bw.write(commandAdd + "\n");
 
 			}
 		} catch (IOException e) {
@@ -119,8 +133,30 @@ public class Undo {
 		}
 	}
 
-	public static void undoWrite() {
-		// buffered writer for overwriting the file with the elements of the commandList
+	public static void undoWrite(Scanner sc) {
+		char confirm = overwriteCheck(sc);
+		if (confirm == '0') {
+			try (BufferedWriter bf = new BufferedWriter(new FileWriter(directory))) {
+				for (String commandAdd : commandList) {
+					bf.write(commandAdd + "\n");
+
+				}
+			} catch (IOException e) {
+				System.out.println("File not found. Check file directory. ");
+			}
+		}
+	}
+
+	public static char overwriteCheck(Scanner sc) {
+		System.out.println(
+				"This action will overwrite a file. All previous listed commands will be erase. Press \'0\' to confirm. ");
+
+		char confirm = sc.nextLine().charAt(0);
+		if (confirm != '0') {
+			System.out.println("Overwrite aborted. Returning to the menu. \n");
+		}
+
+		return confirm;
 	}
 
 	public static void undoStore() {
