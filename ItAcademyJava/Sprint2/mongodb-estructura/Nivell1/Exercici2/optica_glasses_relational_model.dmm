@@ -8,22 +8,6 @@
 			"estimatedSize": "",
 			"cols": [
 				{
-					"id": "db146e48-0cee-44be-89aa-74d6014c33d7",
-					"name": "_id",
-					"datatype": "objectId",
-					"param": "",
-					"pk": true,
-					"nn": true,
-					"list": false,
-					"comment": "",
-					"data": "",
-					"enum": "",
-					"validation": "",
-					"pattern": false,
-					"estimatedSize": "",
-					"any": ""
-				},
-				{
 					"id": "29b0ca9f-001b-4f3d-85d7-a7c9f8d2fa67",
 					"name": "brand",
 					"datatype": "string",
@@ -115,12 +99,7 @@
 					"id": "261c5208-8810-486e-ab31-d257c4db5f79",
 					"name": "Primary",
 					"isPk": true,
-					"cols": [
-						{
-							"id": "6605a556-fe57-4c69-bf48-8e6d1bf903fa",
-							"colid": "db146e48-0cee-44be-89aa-74d6014c33d7"
-						}
-					]
+					"cols": []
 				}
 			],
 			"indexes": [],
@@ -333,22 +312,6 @@
 			"estimatedSize": "",
 			"cols": [
 				{
-					"id": "b4d46da5-c10c-449c-bd71-ffcfc31abbeb",
-					"name": "_id",
-					"datatype": "int",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"list": false,
-					"comment": "",
-					"data": "",
-					"enum": "",
-					"validation": "",
-					"pattern": false,
-					"estimatedSize": "",
-					"any": ""
-				},
-				{
 					"id": "42b6ba1b-ad63-4358-aadf-06cf04b8294f",
 					"name": "street",
 					"datatype": "string",
@@ -518,23 +481,6 @@
 			"desc": "",
 			"estimatedSize": "",
 			"cols": [
-				{
-					"id": "e0cdfec0-05c9-4d57-996e-aa74b9120286",
-					"name": "_id",
-					"datatype": "int",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"list": false,
-					"comment": "",
-					"data": "",
-					"enum": "",
-					"validation": "",
-					"pattern": false,
-					"estimatedSize": "",
-					"any": "",
-					"fk": false
-				},
 				{
 					"id": "eb47923c-6928-4a7f-bc09-5b53e241ea6d",
 					"name": "prescription_left",
@@ -740,23 +686,6 @@
 			"estimatedSize": "",
 			"cols": [
 				{
-					"id": "b0f6262d-dc58-4568-8e60-717ec29b1416",
-					"name": "_id",
-					"datatype": "int",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"list": false,
-					"comment": "",
-					"data": "",
-					"enum": "",
-					"validation": "",
-					"pattern": false,
-					"estimatedSize": "",
-					"any": "",
-					"fk": false
-				},
-				{
 					"id": "d888b961-a26d-436b-bd4e-bc70a4de8d85",
 					"name": "street",
 					"datatype": "string",
@@ -957,7 +886,7 @@
 		"def_collation": "",
 		"def_others": "",
 		"connectionVersion": "",
-		"lastSaved": 1720507538000
+		"lastSaved": 1721168488677
 	},
 	"otherObjects": {},
 	"diagrams": {
@@ -977,7 +906,7 @@
 					"referencedItemId": "bc5b84a3-36f5-48e5-965f-562696caba31",
 					"x": 46,
 					"y": 30,
-					"gHeight": 783,
+					"gHeight": 711,
 					"gWidth": 211,
 					"color": "#ffffff",
 					"background": "#03a9f4",
