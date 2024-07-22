@@ -3,7 +3,7 @@ package corte_irlandes;
 
 import java.util.AbstractMap.SimpleEntry;
 
-public class Electronic extends Product {
+public class Electronic extends Product{
 	
 	private final SimpleEntry<Integer, Integer> resolution;
 	private int batery;
@@ -16,6 +16,38 @@ public class Electronic extends Product {
 		this.resolution = resolution;
 		this.batery = batery;
 	}
+
+
+	public int getBatery() {
+		return batery;
+	}
+
+
+	public void setBatery(int batery) {
+		this.batery = batery;
+	}
+
+
+	public SimpleEntry<Integer, Integer> getResolution() {
+		return resolution;
+	}
+
+
+	public static int getWarranty() {
+		return warranty;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Electronic [resolution=" + resolution + ", batery=" + batery + ", idCode=" + idCode + ", name=" + name
+				+ ", brand=" + brand + ", price=" + price + ", stock=" + stock + ", purchaseDate=" + purchaseDate
+				+ ", discount=" + discount + "]";
+	}
+	
+	
+	
+	
 	
 	
 

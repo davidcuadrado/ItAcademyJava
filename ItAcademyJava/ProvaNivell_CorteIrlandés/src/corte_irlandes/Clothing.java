@@ -13,6 +13,26 @@ public class Clothing extends Product {
 		this.fabric = fabric;
 		this.garment = garment;
 	}
+
+	public String getSize() {
+		return size;
+	}
+
+	public String getFabric() {
+		return fabric;
+	}
+
+	public String getGarment() {
+		return garment;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Clothing [size=" + size + ", fabric=" + fabric + ", garment=" + garment + ", idCode=" + idCode
+				+ ", name=" + name + ", brand=" + brand + ", price=" + price + ", stock=" + stock + ", purchaseDate="
+				+ purchaseDate + ", discount=" + discount + "]";
+	}
 	
 	
 	

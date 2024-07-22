@@ -9,7 +9,20 @@ public class Beauty extends Product {
 	public Beauty(String name, String brand, float price, int stock, int purchaseDate, float discount, boolean vegan) {
 		super(name, brand, price, stock, purchaseDate, discount);
 		this.vegan = vegan;
-	};
+	}
+
+
+	public boolean isVegan() {
+		return vegan;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Beauty [vegan=" + vegan + ", idCode=" + idCode + ", name=" + name + ", brand=" + brand + ", price="
+				+ price + ", stock=" + stock + ", purchaseDate=" + purchaseDate + ", discount=" + discount + "]";
+	}
+	
 	
 	
 
