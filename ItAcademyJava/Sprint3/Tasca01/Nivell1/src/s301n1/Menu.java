@@ -38,7 +38,7 @@ public class Menu {
 	}
 
 	public static void menuClose() {
-		System.out.println("Terminating program execution execution... ");
+		System.out.println("Terminating program execution... ");
 	}
 
 }
