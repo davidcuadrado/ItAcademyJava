@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class Menu {
 
-	public static void start(Scanner sc) {
+	public static void start() {
 
 		System.out.println("Initializing... ");
 		char option = 'X';
 		Command.setInstance();
 		Undo.setInstance();
+		
+		try (Scanner sc = new Scanner(System.in)){
 
 		do {
 			String inputCommand = Command.commandInput(sc);
@@ -27,6 +29,10 @@ public class Menu {
 			}
 
 		} while (option != '9');
+		
+		} catch (Exception e) {
+			System.out.println("Data entry error. ");
+		}
 		menuClose();
 
 	}
