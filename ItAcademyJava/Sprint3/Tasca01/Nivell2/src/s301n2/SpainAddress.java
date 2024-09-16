@@ -1,24 +1,27 @@
 package s301n2;
 
-import java.util.Scanner;
-
 public class SpainAddress implements Address {
-	
+
 	private String street;
-	private int number;
+	private String number;
 	private String city;
 	private int zipCode;
 	private final String country = "Spain";
-	
+	private final int prefix = 34;
 
-	public void setEntry(Scanner sc) {
-		String address;
-		
-		System.out.print("Enter the address: ");
-		do {
-			address = sc.nextLine();
-		} while (address.isEmpty());
-		
+	SpainAddress() {
+
+	}
+
+	SpainAddress(String street, String number, String city, int zipCode) {
+		this.street = street;
+		this.number = number;
+		this.city = city;
+		this.zipCode = zipCode;
+	}
+
+	public void setEntry() {
+
 		System.out.println("Spanish address added. ");
 	}
 
