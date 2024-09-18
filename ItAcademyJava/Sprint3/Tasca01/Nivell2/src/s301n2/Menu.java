@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class Menu {
 
 	public static boolean menuRun() {
+		
+		
 
 		int option = -1;
 
@@ -55,11 +57,16 @@ public class Menu {
 	}
 
 	public static void addContact(Scanner sc) {
+		
 		int country = selectCountry(sc);
 		int prefix = setCountryPrefix(country);
+		String name = ContactInput.inputName(sc);
 
 		Manager manager = Manager.configureManager(sc, prefix);
-		manager.setContactEntry();
+		manager.setContactEntry(name);
+		
+		
+		
 
 	}
 
