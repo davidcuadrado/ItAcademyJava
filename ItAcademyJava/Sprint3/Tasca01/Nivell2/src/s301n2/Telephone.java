@@ -1,9 +1,10 @@
 package s301n2;
 
 
-
 public interface Telephone {
 
-	void setEntry();
+	void setTelephone(Telephone telephone);
+	
+	String getTelephone();
 
 }

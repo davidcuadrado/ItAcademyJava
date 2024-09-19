@@ -11,13 +11,7 @@ public class Manager {
 		this.address = contact.addAddress(sc);
 		this.telephone = contact.addTelephone(sc, prefix);
 	}
-
-	public void setContactEntry() {
-		address.setEntry();
-		telephone.setEntry();
-
-	}
-
+	
 	public static Manager configureManager(Scanner sc, int prefix) {
 		Manager manager;
 		ContactFactory contact = null;
@@ -30,5 +24,21 @@ public class Manager {
 		manager = new Manager(sc, contact, prefix);
 		return manager;
 	}
+
+	public void setContactEntry(String name) {
+		
+		address.setAddress(this.address);
+		telephone.setTelephone(this.telephone);
+		
+		Contact newContact = new Contact(name);
+		newContact.setAddress(address);
+		newContact.setTelephone(telephone);
+		newContact.toString();
+		
+		
+
+	}
+
+	
 
 }

@@ -4,15 +4,12 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		boolean exit = false;
 
 		welcome();
-		do {
-		exit = Menu.menuRun();
-		} while (!exit);
+		
+		Menu.menuRun();
 		
 		goodbye();
-
 
 	}
 

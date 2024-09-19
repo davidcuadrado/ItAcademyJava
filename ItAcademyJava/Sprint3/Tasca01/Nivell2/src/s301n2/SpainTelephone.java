@@ -4,33 +4,40 @@ import java.util.Scanner;
 
 public class SpainTelephone implements Telephone {
 	
-	private int telephone;
+	private String telephone;
+	private final int prefix = 34;
 	
 	SpainTelephone(){
 	}
 	
-	SpainTelephone(int telephone){
+	SpainTelephone(String telephone){
 		this.telephone = telephone;
 	}
 	
-	public void setEntry() {
+	public void setTelephone(Telephone telephone) {
 		
-		System.out.println("Spanish telephone added. ");
+		this.telephone = telephone.getTelephone();
+		System.out.println("Spanish telephone added to your contact. ");
 	}
 	
-	public static int spanishTelephoneInput(Scanner sc) {
+	public static String spanishTelephoneInput(Scanner sc) {
 		
-		int telephone = 0;
+		String telephone;
 		
 		System.out.print("Telephone: ");
-		telephone = sc.nextInt();
+		telephone = sc.nextLine();
 		
-		while (telephone > 999999999 || telephone < 100000000) {
+		while (telephone.length() != 9) {
 			System.out.println("Incorrect value for Spain telephones. Add a telephone number with 9 digits. \nTelephone:");
-			telephone = sc.nextInt();
+			sc.nextLine();
+			telephone = sc.nextLine();
 		}
-		
+		new SpainTelephone(telephone);
 		return telephone;
+	}
+	
+	public String getTelephone() {
+		return "+" + prefix + " " + telephone;
 	}
 
 }
