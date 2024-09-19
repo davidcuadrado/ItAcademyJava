@@ -8,7 +8,7 @@ public class Pizza {
     private final Dough dough;
     private final Topping ingredients;
 
-    Pizza(PizzaType pizzaType, String name, int size, Dough dough, Topping ingredients) {
+    public Pizza(PizzaType pizzaType, String name, int size, Dough dough, Topping ingredients) {
         this.pizzaType = pizzaType;
         this.name = name;
         this.size = size;
