@@ -17,19 +17,19 @@ public class Topping {
     }
 
     public void addTopping(Ingredient ingredient){
-        toppingList.add(ingredient);
+        this.toppingList.add(ingredient);
     }
 
     public void removeTopping(Ingredient ingredient){
-        toppingList.remove(ingredient);
+        this.toppingList.remove(ingredient);
     }
 
     public void setVegan() {
-        vegan = true;
+        this.vegan = true;
     }
 
     public void setNotVegan() {
-        vegan = false;
+        this.vegan = false;
     }
 
     public boolean getVegan(){
