@@ -31,8 +31,16 @@ public class PizzaBuilder implements RecipeBuilder {
     }
 
     @Override
-    public void setIngredients(Topping ingredients) {
-        this.ingredients = ingredients;
+    public void setTopping(Ingredient ingredient1, Ingredient ingredient2, Ingredient ingredient3) {
+
+        ArrayList<Ingredient> toppingList = new ArrayList<Ingredient>();
+        toppingList.add(ingredient1);
+        toppingList.add(ingredient2);
+        toppingList.add(ingredient3);
+
+        boolean vegan = Topping.checkVegan(toppingList);
+        this.ingredients = new Topping(toppingList, vegan);
+
     }
 
     public Pizza getResult() {

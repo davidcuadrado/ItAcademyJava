@@ -1,6 +1,5 @@
 package s302n1;
 
-import java.util.ArrayList;
 
 public class Pizza {
     private final PizzaType pizzaType;

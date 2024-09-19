@@ -36,7 +36,7 @@ public class Topping {
         return vegan;
     }
 
-    public boolean checkVegan() {
+    public static boolean checkVegan(ArrayList<Ingredient> toppingList) {
         for (Ingredient ingredient : toppingList) {
             if (ingredient.toString().equalsIgnoreCase("CHEESE") ||
                     ingredient.toString().equalsIgnoreCase("CHICKEN") ||

@@ -1,7 +1,5 @@
 package s302n1;
 
-import java.util.ArrayList;
-
 public interface RecipeBuilder {
 
     void setPizzaType(PizzaType pizzaType);
@@ -12,7 +10,7 @@ public interface RecipeBuilder {
 
     void setDough(Dough dough);
 
-    void setIngredients(Topping ingredients);
+    void setTopping(Ingredient ingredient1, Ingredient ingredient2, Ingredient ingredient3);
 }
 
 
