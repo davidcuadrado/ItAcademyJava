@@ -5,32 +5,39 @@ import listeners.*;
 
 public class Principal {
 
-
 	public static void main(String[] args) {
 		Editor itAcademyEditor = new Editor();
 		Editor barcelonActivaEditor = new Editor();
 
-		itAcademyEditor.events.subscribe("open", new LogOpenObserver("ITAcademy"));
-		itAcademyEditor.events.subscribe("save", new NotifyStockObserver("David"));
-		itAcademyEditor.events.subscribe("save", new NotifyStockObserver("Aleixandre"));
-		itAcademyEditor.events.subscribe("modify", new NotifyStockObserver("David"));
-		
+		LogOpenObserver logObserverITA = new LogOpenObserver("ITAcademy");
+		NotifyStockObserver notifyDavid = new NotifyStockObserver("David");
+		NotifyStockObserver notifyAleixandre = new NotifyStockObserver("Aleixandre");
+
+		itAcademyEditor.events.subscribe("open", logObserverITA); // print1
+		itAcademyEditor.events.subscribe("save", notifyDavid);
+		itAcademyEditor.events.subscribe("save", notifyAleixandre);
+		itAcademyEditor.events.subscribe("modify", notifyDavid);
+
 		itAcademyEditor.openStock("ITAcademy", (byte) 95.5);
 		itAcademyEditor.saveStock();
-		
+
 		barcelonActivaEditor.openStock("BarcelonActiva", (byte) 56);
-		barcelonActivaEditor.events.subscribe("open", new LogOpenObserver("BarcelonActiva"));
-		barcelonActivaEditor.events.subscribe("save", new NotifyStockObserver("Aleixandre"));
-		
-		
+
+		LogOpenObserver logObserverBA = new LogOpenObserver("BarcelonActiva");
+		barcelonActivaEditor.events.subscribe("open", logObserverBA);
+		barcelonActivaEditor.events.subscribe("save", notifyAleixandre);
+
 		itAcademyEditor.modifyStock((byte) 5);
 		itAcademyEditor.modifyStock((byte) 8);
-		
+		itAcademyEditor.saveStock();
+
+		itAcademyEditor.events.unsubscribe("save", notifyDavid);
+
 		itAcademyEditor.modifyStock((byte) 10);
-		
+		barcelonActivaEditor.modifyStock((byte) -32);
+
 		itAcademyEditor.saveStock();
 		barcelonActivaEditor.saveStock();
-		
 
 	}
 
