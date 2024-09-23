@@ -8,19 +8,19 @@ public class Ship extends Vehicle {
 
 	@Override
 	public void start() {
-		System.out.println("Ship " + brand + model + " ready to go. ");
+		System.out.println("Ship " + brand + " " + model + " ready to go. ");
 
 	}
 
 	@Override
 	public void accelerate() {
-		System.out.println("Ship " + brand + model + " accelerating. ");
+		System.out.println("Ship " + brand + " " + model + " accelerating. ");
 
 	}
 
 	@Override
 	public void brake() {
-		System.out.println("Ship " + brand + model + " braking. ");
+		System.out.println("Ship " + brand + " " + model + " braking. ");
 
 	}
 
