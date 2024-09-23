@@ -16,4 +16,20 @@ public abstract class Vehicle {
 
 	public abstract void brake();
 
+	public String getBrand() {
+		return brand;
+	}
+
+	public String getModel() {
+		return model;
+	}
+	
+	//continaur con toString
+	@Override
+	public String toString() {
+		return "Vehicle [brand=" + brand + ", model=" + model + "]";
+	}
+	
+	
+
 }

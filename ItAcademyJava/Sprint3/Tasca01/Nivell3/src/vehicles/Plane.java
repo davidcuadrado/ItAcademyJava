@@ -8,19 +8,19 @@ public class Plane extends Vehicle {
 
 	@Override
 	public void start() {
-		System.out.println("Plane " + brand + model + " ready to go. ");
+		System.out.println("Plane " + brand + " " + model + " ready to go. ");
 
 	}
 
 	@Override
 	public void accelerate() {
-		System.out.println("Plane " + brand + model + " accelerating. ");
+		System.out.println("Plane " + brand + " " + model + " accelerating. ");
 
 	}
 
 	@Override
 	public void brake() {
-		System.out.println("Plane " + brand + model + " braking. ");
+		System.out.println("Plane " + brand + " " + model + " braking. ");
 
 	}
 
