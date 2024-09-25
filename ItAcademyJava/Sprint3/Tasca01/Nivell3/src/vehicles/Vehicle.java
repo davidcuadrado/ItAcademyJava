@@ -23,13 +23,10 @@ public abstract class Vehicle {
 	public String getModel() {
 		return model;
 	}
-	
-	//continaur con toString
+
 	@Override
 	public String toString() {
 		return "Vehicle [brand=" + brand + ", model=" + model + "]";
 	}
-	
-	
 
 }
