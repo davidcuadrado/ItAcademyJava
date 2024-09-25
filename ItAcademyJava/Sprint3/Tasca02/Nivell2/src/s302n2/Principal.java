@@ -18,7 +18,7 @@ public class Principal {
 		itAcademyEditor.events.subscribe("save", notifyAleixandre);
 		itAcademyEditor.events.subscribe("modify", notifyDavid);
 
-		itAcademyEditor.openStock("ITAcademy", (byte) 95.5);
+		itAcademyEditor.openStock("ITAcademy", (byte) 95);
 		itAcademyEditor.saveStock();
 
 		barcelonActivaEditor.openStock("BarcelonActiva", (byte) 56);
