@@ -1,13 +1,19 @@
 package s301n2;
 
+import java.util.Comparator;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import implementations.Contact;
+import implementations.ContactInput;
+import implementations.ContactList;
+import implementations.Manager;
 
 public class Menu {
 
 	public static boolean menuRun() {
 		
-		
+		ContactList.setInstance();
 
 		int option = -1;
 
@@ -27,7 +33,7 @@ public class Menu {
 			} while (option != 0);
 		} catch (InputMismatchException i) {
 			System.out.println("Invalid data entry. ");
-			option= 0;
+			option = 0;
 
 		} catch (Exception e) {
 			System.out.println("An unresolved exception happend. Relaunch needed. ");
@@ -50,36 +56,33 @@ public class Menu {
 
 		System.out.println(
 				"\nEnter the number of your next desired action: \n1. Add a new contact \n2. Show contact list \n0. Exit application");
-		
+
 		int option = sc.nextInt();
 
 		return option;
 	}
 
 	public static void addContact(Scanner sc) {
-		
+
 		int country = selectCountry(sc);
 		int prefix = setCountryPrefix(country);
 		String name = ContactInput.inputName(sc);
 
 		Manager manager = Manager.configureManager(sc, prefix);
 		manager.setContactEntry(name);
-		
-		
-		
 
 	}
 
 	public static int selectCountry(Scanner sc) {
 		int country = 0;
-		
+
 		System.out.println("Select the country number of new contact: \n1. Spain \n2. Portugal ");
 
 		do {
 			;
 			country = sc.nextInt();
 			sc.nextLine();
-			
+
 			if (!(country >= 1 && country <= 2)) {
 				System.out.println("Incorrect country option. Please, try again: \n1. Spain \n2. Portugal");
 			}
@@ -103,7 +106,16 @@ public class Menu {
 
 	private static void showList() {
 
-		System.out.println("Showing the contact list. ");
+		if (ContactList.contactList.isEmpty()) {
+			System.out.println("Your contact list is empty! ");
+		} else {
+			ContactList.contactList.sort(Comparator.comparing(Contact::getName));
+			System.out.println("Showing the contact list: ");
+			for (Contact contact : ContactList.contactList) {
+				System.out.println(contact);
+			}
+		}
+
 	}
 
 }
