@@ -15,7 +15,7 @@ public class PayPal implements PayMethod {
 	@Override
 	public void selectPayMethod(PayMethod payPal, int price) {
 		System.out.println("Introduce your PayPal data for " + price + "€ payment: ");
-		
+
 		PayPal payPalPayment = new PayPal("payments@thepayer.com");
 
 		System.out.println("PayPal payment is successful. ");
